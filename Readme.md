@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ksenia Krasnova](https://up.htmlacademy.ru/htmlcss/36/user/1094015).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктория Никитина](https://up.htmlacademy.ru/htmlcss/36/user/1217273).
 
 ---
 

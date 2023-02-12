@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -54,7 +55,6 @@
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
-      </header>
       <section class="catalog-poducts">
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -126,14 +126,16 @@
           <button class="button" type="reset">Сбросить</button>
         </form>
       </section>
+      </header>
       <section>
         <h2 class="found-hotels">Найдено гостиниц: 38</h2>
+        <div class="sorting-container">
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала дешевые</option>
           <option value="cheap">Сначала популярные</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
-        <a href="#" class="button button-light">
+        <a class="button button-light" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
         <a class="button" href="#">
@@ -142,6 +144,7 @@
         <a class="button" href="#">
           <span class="visually-hidden">Показать список</span>
         </a>
+        </div>
         <ul class="hotels-list">
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">

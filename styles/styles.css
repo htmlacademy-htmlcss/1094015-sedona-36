@@ -279,3 +279,111 @@ body {
     background-color: #FFFFFF;
     text-decoration-line: none;
 }
+
+/* catalog */
+
+.inner-header-title {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+    color: #FFFFFF;
+}
+
+/* Link*/
+
+.breadcrumbs-link {
+    color: inherit;
+}
+
+/* Title*/
+
+.catalog-filter-group {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+
+/* Label*/
+
+.control-label {
+    font-weight: 400;
+}
+
+.sorting-container {
+    color: 333333;
+    background-color: #ffffff;
+  }
+
+/* Item */
+
+.hotel-card {
+    background: #FFFFFF;
+
+}
+
+/* Link */
+
+.hotel-card-link {
+    text-decoration: none;
+}
+
+/* Title */
+
+.hotel-card-title {
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Price */
+
+.price-housing {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    text-align: right;
+}
+
+.description-housing {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+}
+
+/* Pagination */
+
+.pagination {
+    background-color: #82B3D3;;
+}
+
+.pagination-link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+
+.inner-header {
+    color: #FFFFFF;
+    background-color: #000000;
+    background-image: url("../images/catalog-directory.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}

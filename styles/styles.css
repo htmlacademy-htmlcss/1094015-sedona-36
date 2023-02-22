@@ -1,25 +1,33 @@
 @font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url(../fonts/ptsans-400.woff2); format(".woff2")
-    font-display: swap
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2);
+  format(".woff2") font-display: swap
 }
 
 @font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 700;
-    src: url(../fonts/ptsans-700.woff2); format(".woff2")
-    font-display: swap
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2);
+  format(".woff2") font-display: swap
+}
+
+html {
+  height: 100%;
 }
 
 body {
-    font-family: "PT Sans", sans-serif;
-    font-size: 22px;
-    line-height: 26px;
-    color: #000000;
-    background-color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .button {
@@ -95,97 +103,211 @@ body {
 /* Pages */
 
 .page-header {
-    color: #000000;
-    background-color: #ffffff;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 138px;
+  margin-right: auto;
+}
+
+.navigation-list {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-user {
+  max-width: 280px;
+  margin-left: auto;
 }
 
 .navigation-link {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 700;
-    text-align: center;
-    color: #000000;
-    background-color: #ffffff;
-    text-decoration: none;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .main-index {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: url("../images/foto-welcome.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  background-image: url("../images/foto-welcome.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-sedona {
+  display: block;
+  margin: 0 auto;
 }
 
 /* List */
+
+.advantages {
+  background-color: #ffffff;
+}
+
 .advantages-list {
-    text-align: center;
-  }
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
 
 /* Title */
-  .advantages-title {
-    font-family: "PT Sans", sans-serif;
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+.about-city {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-  .blue,
-  .advantages-white {
-    color: #ffffff;
-    background: #82B3D3;
-  }
+.advantages-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
-  .light-blue,
-  .advantages-black {
-    color: #000000;
-    background: rgba(131, 179, 211, 0.12);
-  }
+.advantages-description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+}
 
-  .medium-blue {
-    background: rgba(131, 179, 211, 0.2);
-  }
+.blue {
+  width: 1200px;
+  display: flex;
+}
 
-  /* Photo bridge */
+.blue,
+.advantages-white {
+  color: #ffffff;
+  background: #82B3D3;
+  text-align: center;
+}
+
+.light-blue,
+.advantages-black {
+  color: #000000;
+  background: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.medium-blue {
+  width: 400px;
+  height: 385px;
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.blue-block {
+  text-align: center;
+  width: 400px;
+  height: 385px;
+}
+
+/* Photo bridge */
 .photo-bridge {
-    color: #ffffff;
-    background-color: ##82B3D3;
-    background-image: url("../images/foto-bridge.jpg");
-  }
+  color: #ffffff;
+  background-color: ##82B3D3;
+  background-image: url("../images/foto-bridge.jpg");
+}
 
-  /* Services*/
+.photo-town {
+  width: 800px;
+  height: 385px;
+}
+
+/* Services*/
 
 .services {
-    font-family: 'PT Sans';
-    text-align: center;
-  }
+  font-family: 'PT Sans';
+}
 
-  /* Title */
-  .services-about {
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #000000;
-  }
-  .services-description {
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.services-item {
+  width: 400px;
+  height: 385px;
+  padding: 81px 85px;
+}
+
+/* Title */
+.services-about {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.services-text {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
     font-size: 22px;
     line-height: 26px;
-    font-weight: 400;
-    color: #333333;
-  }
+}
 
-  .services-title {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
-    color: #000000;
-  }
 
-  .services-housing,
-  .services-souvenirs {
+
+.services-description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.services-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.services-housing,
+.services-souvenirs {
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -194,8 +316,8 @@ body {
 }
 
 .services-item {
-    Width: 400px;
-    Height: 385px;
+  Width: 400px;
+  Height: 385px;
 }
 
 /* Searh */
@@ -357,7 +479,8 @@ body {
 
 .pagination-link {
   color: #ffffff;
-  background-color: #82B3D3;;
+  background-color: #82B3D3;
+  ;
   text-decoration: none;
   line-height: 36px;
   font-size: 20px;
@@ -380,4 +503,10 @@ body {
   background-image: url("../images/catalog-directory.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.footer-catalog {
+  color: #000000;
+  background-color: #ffffff;
+  text-align: center;
 }

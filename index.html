@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
@@ -44,7 +45,6 @@
     </header>
 
     <main class="main-container main-index">
-      <div class="page-conteiner">
       <h1 class="visually-hidden">Неофициальный сайт города Седона</h1>
       <section class="welcome">
         <h2 class="visually-hidden">Welcome to the gorgeous Sedona</h2>
@@ -52,39 +52,49 @@
       </section>
       <section class="advantages">
         <h2 class="visually-hidden">Причины, по которым Седона круче, чем Гранд-Каньон!</h2>
-        <p class="about-city">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <div class="advantages-container">
+        <p class="about-city">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="advantages-reasons">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        </div>
         <ul class="advantages-list">
           <li class="advantages-item blue">
             <div class="blue-block">
                <h3 class="advantages-title advantages-white">Настоящий городок</h3>
-               <p class="advantages-description">Седона — не аттракцион для <br> туристов, там течёт своя <br> жизнь</p>
+               <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="photo-town" src="./images/foto-town.jpg" width="800" height="384" alt="Место отдыха в Седоне">
+            <div class="img-town">
+             <img class="photo-town" src="./images/foto-town.jpg" width="800" height="384" alt="Место отдыха в Седоне">
+            </div>
           </li>
           <li class="advantages-item light-blue">
             <h3 class="advantages-title advantages-black">Небольшая площадь</h3>
-            <p class="advantages-description">Все достопримечательности находятся очень близко</p>
+            <p class="advantages-description color-black">Все достопримечательности находятся очень близко</p>
           </li>
           <li class="advantages-item medium-blue">
             <h3 class="advantages-title advantages-black">Красивая дорога</h3>
-            <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="advantages-description color-black">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="advantages-item light-blue">
             <h3 class="advantages-title advantages-black">Мало туристов</h3>
-            <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+            <p class="advantages-description color-black">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-item blue">
-            <img class="photo-bridge" src="./images/foto-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
-            <h3 class="advantages-title advantages-white">Там есть мост дьявола</h3>
-            <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <div class="blue-block">
+              <h3 class="advantages-title advantages-white">Там есть мост дьявола</h3>
+              <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+            <div class="img-bridge">
+              <img class="photo-bridge" src="./images/foto-bridge.jpg" width="800" height="385" alt="Мост Дьявола">
+            </div>
           </li>
         </ul>
       </section>
       <section class="services">
         <h2 class="visually-hidden">Приезжайте в Седону!</h2>
-        <p class="services-about">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <div class="services-container">
+        <p class="services-about">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
         <p class="services-text">Опытный персонал и качественное обслуживание!</p>
+        </div>
         <ul class="services-list">
           <li class="services-item services-housing">
             <h3 class="services-title">Жильё</h3>
@@ -103,11 +113,10 @@
       <section class="interested">
         <h2 class="visually-hidden">Заинтересовались?</h2>
         <p class="interested-title">Заинтересовались?</p>
-        <p class="interested-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
+        <p class="interested-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения
           гостиниц в Седоне</p>
         <a class="button button-search" href="catalog.html">Поиск гостиницы в седоне</a>
       </section>
-    </div>
     </main>
     <footer class="page-footer">
       <section class="newsletter">
@@ -115,12 +124,13 @@
         <p class="footer-title">Подпишитесь на рассылку</p>
         <p class="footer-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="newsletter-email">
-            <input type="text" name="E-mail" placeholder="Ваш e-mail" required>
-          </p>
+          <!-- <p class="newsletter-email"> -->
+            <label class="footer-label" for="mail"></label>
+            <input class="footer-input" type="text" name="E-mail" placeholder="Ваш e-mail" required>
           <button class="button button-mail" type="submit">Подписаться</button>
         </form>
       </section>
+      <div class="page-footer-social">
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
@@ -145,8 +155,12 @@
         <h2 class="visually-hidden">Контактный телефон</h2>
         <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
+      <section class="footer-link">
       <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+      </section>
+      </div>
     </footer>
+  </div>
   </body>
 
 </html>

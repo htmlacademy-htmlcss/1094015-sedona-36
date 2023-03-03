@@ -1,389 +1,743 @@
 @font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 400;
-    src: url(../fonts/ptsans-400.woff2); format(".woff2")
-    font-display: swap
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "PT Sans";
-    font-style: normal;
-    font-weight: 700;
-    src: url(../fonts/ptsans-700.woff2); format(".woff2")
-    font-display: swap
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-    font-family: "PT Sans", sans-serif;
-    font-size: 18px;
-    line-height: 21px;
-    color: #000000;
-    background-color: #FFFFFF;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.button {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button-here {
+  font-size: 16px;
+  line-height: 20px;
+  background: #756157;
+}
+
+.button-search {
+ margin: 0 auto;
+ border: none;
+ display: block;
+ border-radius: 4px;
+ width: 376px;
+ padding: 0;
+ padding-top: 8px;
+ padding-bottom: 8px;
+ background: #756157;
+}
+
+.button-mail {
+  font-size: 20px;
+  line-height: 36px;
+  background: #82b3d3;
+  border-radius: 0px 4px 4px 0px;
+  padding: 8px 50px;
+  border: none;
+  font-weight: 700px;
+  color: #ffffff;
+}
+
+/* Light */
+.button-light {
+  color: #242424;
+  background-color: #ffffff;
+}
+
+.button-like {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #82B3D3;
+}
+
+.button-selected {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #7DB54F;
+}
+
+.button-detail {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #756157;
+}
+
+.button-rating {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  background: #F2F2F2;
+}
+
+.button-apply {
+  color: #ffffff;
+  background: #82B3D3;
+}
+
+.button-reset {
+  color: #ffffff;
 }
 
 /* Pages */
 
 .page-header {
-    color: #000000;
-    background-color: #FFFFFF;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-logo {
+  width: 140px;
+  margin-right: 44px;
+  margin-left: 70px;
+}
+
+.navigation-list {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation-user {
+  max-width: 280px;
+  margin-left: auto;
 }
 
 .navigation-link {
-    font-family: "PT Sans", sans-serif;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 700;
-    color: inherit;
-    background-color: inherit;
-    text-decoration: none;
-    text-align: center;
+  display: block;
+  padding: 20px 32px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
 }
 
-.page-header a {
-    color: #000000;
-    text-decoration-line: none;
+.navigation-user .navigation-list  {
+  min-width: 44px;
+  min-height: 64px;
+
 }
 
-.navigation-here {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    text-transform: uppercase;
+.main-container {
+  flex-grow: 1;
+  padding-top: 51px;
+  padding-bottom: 82px;
 }
 
 .main-index {
-    color: #000000;
-    background-color: #FFFFFF;
-    background-image: url("../images/foto-welcome.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  background-image: url("../images/foto-welcome.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
-.advantages {
-    font-family: "PT Sans", sans-serif;
-    color: #000000;
-    background-color: #FFFFFF;
-    text-decoration: none;
-    text-align: center;
-}
-
-.advantages-city {
-    color: inherit;
-    background-color: inherit;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    text-transform: uppercase;
-}
-
-.advantages-reasons {
-    color: inherit;
-    background-color: inherit;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-
+.welcome-sedona {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 82px;
 }
 
 /* List */
 
+.advantages {
+  background-color: #ffffff;
+  margin-top: 21px;
+  margin-bottom: 64px;
+}
+
 .advantages-list {
-    text-align: center;
-}
-
-/* Title*/
-
-.advantages-first {
-    color: #FFFFFF;
-    background-color: #82B3D3;
-}
-
-.advantages-second {
-    background: rgba(131, 179, 211, 0.12);
-}
-
-.advantages-three {
-    background: rgba(131, 179, 211, 0.2);
-}
-
-.reasons {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.advantages-reasons {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #333333;
-}
-
-.reasons-title {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    text-transform: uppercase;
-}
-
-.advantages-description {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-}
-
-
-/* Services */
-
-.services {
-    text-decoration: none;
-    text-align: center;
-    font-family: 'PT Sans', sans-serif;
-}
-
-.services-title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    text-transform: uppercase;
-    color: #000000;
-
-}
-
-.services-description {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    color: #333333;
-}
-
-.services-housing {
-    background: rgba(131, 179, 211, 0.12);
-
-}
-
-.services-item {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.services-description {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    flex: none;
-}
-
-.services-meal {
-    background: #FFFFFF;
-}
-
-.services-souvenirs {
-    background: rgba(131, 179, 211, 0.12);
-}
-
-/* interested */
-
-.main-index a {
-    background-color: #756157;
-    color: #FFFFFF;
-}
-
-.interested {
-    text-decoration: none;
-    text-align: center;
-    font-family: 'PT Sans', sans-serif;
-    background: #FFFFFF;
-    text-decoration-line: none;
-}
-
-.interested-title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    text-transform: uppercase;
-    color: #000000;
-    background: #FFFFFF;
-}
-
-.interested-description {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    color: #333333;
-    background: #FFFFFF;
-}
-
-/* footer */
-
-.page-footer {
-    font-family: 'PT Sans', sans-serif;
-    text-align: center;
-}
-
-.newsletter {
-    color: #FFFFFF;
-    background-color: #000000;
-    background-image: url("../images/foto-footer.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-}
-
-.footer-title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    text-transform: uppercase;
-    color: #FFFFFF
-}
-
-.footer-description {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    color: #FFFFFF
-}
-
-/* phone */
-
-.footer-contacts {
-    font-family: 'PT Sans';
-    text-align: center;
-}
-
-.page-footer a {
-    color: #83B3D3;
-}
-
-.page-footer .contacts-phone {
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 40px;
-    text-transform: uppercase;
-    color: #000000;
-    background-color: #FFFFFF;
-    text-decoration-line: none;
-}
-
-.page-footer .htmlacademy-link {
-    color: #000000;
-    background-color: #FFFFFF;
-    text-decoration-line: none;
-}
-
-/* catalog */
-
-.inner-header-title {
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 78px;
-    color: #FFFFFF;
-    background-color: #000000;
-}
-
-/* Breadcrumbs */
-
-.breadcrumbs {
-    color: #FFFFFF;
-}
-
-/* Link*/
-
-.breadcrumbs-link {
-    color: inherit;
-}
-
-/* Title*/
-
-.catalog-filter-group {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    color: #FFFFFF;
-}
-
-
-/* Label*/
-
-.control-label {
-    font-weight: 400;
-}
-
-.sorting-container {
-    color: 333333;
-    background-color: #ffffff;
-  }
-
-/* Item */
-
-.hotel-card {
-    background: #FFFFFF;
-
-}
-
-/* Link */
-
-.hotel-card-link {
-    text-decoration: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style-type: none;
 }
 
 /* Title */
-
-.hotel-card-title {
-    font-family: 'PT Sans';
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
-    text-decoration: none;
+.about-city {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
-/* Price */
+.advantages-list-midl {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
-.price-housing {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #333333;
-    text-align: right;
+.advantages-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 61px;
+  position: relative;
+}
+
+.advantages-description {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 auto;
+  width: 230px;
+}
+
+.color-black {
+  color: #333333;
+}
+
+.advantages-container {
+  margin: 0 auto;
+  padding-top: 69px;
+  padding-bottom: 69px;
+  max-width: 651px;
+}
+
+.advantages-item {
+  width: 400px;
+  box-sizing: border-box;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  min-height: 385px;
+  text-align: center;
+}
+
+.photo-town {
+  color: #ffffff;
+  background-color: ##82B3D3;
+  background-image: url("../images/foto-town.jpg");
+  overflow: hidden;
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+.light-blue {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-black {
+  width: 175px;
+  margin: 0 auto;
+  margin-bottom: 62px;
+}
+
+.blue {
+  color: #ffffff;
+  background-color: #82b3d3;
+  display: flex;
+  width: 1200px;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-white {
+  color: #ffffff;
+  background: #82B3D3;
+  width: 175px;
+  margin: 0 auto;
+  margin-bottom: 62px;
+}
+
+.medium-blue {
+  width: 400px;
+  height: 385px;
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.blue-block {
+  width: 400px;
+  overflow: hidden;
+  background: #82b3d3;
+  box-sizing: border-box;
+  min-height: 385px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 103px;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+/* Photo bridge */
+.photo-bridge {
+  color: #ffffff;
+  background-color: ##82B3D3;
+  background-image: url("../images/foto-bridge.jpg");
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+/* Services */
+.services {
+  font-family: 'PT Sans';
+}
+
+.services-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.services-item {
+  width: 400px;
+  box-sizing: border-box;
+  min-height: 385px;
+  text-align: center;
+  padding: 80px 85px;
+  position: relative;
+}
+}
+
+/* Title */
+.services-about {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto 20px;
+  padding: 0;
+  width: 505px;
+}
+
+.services-container {
+  margin: 0 auto;
+  padding: 64px 0;
+  max-width: 519px;
+}
+
+
+.services-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin: 0 auto 64px;
+  padding: 0;
+  width: 490px;
+}
+
+.services-description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0 auto;
+  padding: 0;
+  width: 230px;
+}
+
+.services-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 102px;
+  width: 230px;
+  padding-bottom: 30px;
+}
+
+
+.services-housing,
+.services-souvenirs {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.services-meal {
+  background-color: #ffffff;
+}
+
+.services-item {
+  Width: 400px;
+  Height: 385px;
+}
+
+/* Searh */
+
+.interested {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  width: 592px;
+  margin: 0 auto;
+}
+
+.interested-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto 20px;
+  padding: 0;
+  width: 330px;
+}
+
+.interested-description {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  margin: 0 auto 54px;
+  padding: 0;
+  width: 592px;
+}
+
+.page-footer-social {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-social {
+  width: 190px;
+  margin-right: 237px;
+}
+
+.footer-link {
+  width: 115px;
+  margin-left: auto;
+}
+
+.footer-label {
+  Width: 232px;
+  height: 52px;
+}
+
+.footer-input {
+  Width: 452px;
+  height: 52px;
+}
+
+/*Subscription*/
+
+.newsletter {
+  color: #ffffff;
+  background-color: #82b3d3;
+  background-image: url("../images/foto-footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;
+}
+
+.newsletter-form {
+  margin-bottom: 104px;
+}
+
+.footer-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 404px;
+  margin-bottom: 20px;
+}
+
+.footer-description {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-input {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  width: 452px;
+  color: #000000;
+}
+
+/* Social */
+
+.footer-social-list {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  margin-right: 41px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.page-footer a {
+  color: #83B3D3;
+}
+
+.page-footer .contacts-phone {
+  color: #000000;
+}
+
+.page-footer .htmlacademy-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-inner a {
+  text-decoration: none;
+}
+
+/* Catalog */
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  color: #ffffff;
+}
+
+.catalog-products {
+  display: flex;
+}
+
+.catalog-right-column {
+  width: 1060px;
+}
+.catalog-filter {
+  width: 150px;
+  margin-bottom: 130px;
+}
+
+/* Link */
+.breadcrumbs-link {
+  color: inherit;
+}
+
+/* Title */
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Label */
+.control-label {
+  font-weight: 700;
+}
+
+.sorting-container {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Item */
+.hotel-card {
+  background-color: #ffffff;
+}
+
+/* Link */
+.hotel-card-link {
+  text-decoration: none;
+}
+
+/* Title */
+.hotel-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
 }
 
 .description-housing {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #333333;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
 }
 
-/* Pagination */
+/* Price */
+.price-housing {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+}
 
+/* Link */
 .pagination {
-    background-color: #82B3D3;;
+  background-color: #ffffff;
 }
 
 .pagination-link {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 36px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
+  color: #ffffff;
+  background-color: #82B3D3;
+  ;
+  text-decoration: none;
+  line-height: 36px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
+.pagination-current {
+  color: #242424;
+  background-color: #F2F2F2;
+}
+
+.pagination-next {
+  color: #000000;
+  background: #ffffff;
+}
 
 .inner-header {
-    color: #FFFFFF;
-    background-color: #000000;
-    background-image: url("../images/catalog-directory.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+  color: #ffffff;
+  background-color: #82B3D3;
+  background-image: url("../images/catalog-directory.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.title-catalog {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 404px;
+  margin-bottom: 20px;
+}
+
+.footer-catalog {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #333333
+  text-align: center;
+}
+
+.newsletter-footer {
+  color: #000000;
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 96px;
 }

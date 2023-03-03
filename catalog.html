@@ -8,35 +8,36 @@
   </head>
 
   <body>
+    <div class="page-container">
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img class="header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седона">
+          <img class="header-logo" src="./images/logo.svg" width="140" height="70" alt="Логотип сайта Седона">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-main" href="index.html">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-sedona" href="about.html">О Cедоне</a>
+            <a class="navigation-link" href="about.html">О Cедоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-hotels" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-search" href="#">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-favourites" href="#">
+            <a class="navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
               <span class="favourites-number">12</span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-here">
             <a class="button button-here" href="#">Хочу сюда</a>
           </li>
         </ul>
@@ -122,13 +123,14 @@
               </div>
             </div>
           </fieldset>
-          <button class="button" type="submit">Применить</button>
-          <button class="button" type="reset">Сбросить</button>
+          <button class="button button-apply" type="submit">Применить</button>
+          <button class="button button-reset" type="reset">Сбросить</button>
         </form>
       </section>
       </header>
       <section>
         <h2 class="found-hotels">Найдено гостиниц: 38</h2>
+        <div class="catalog-right-column"></div>
         <div class="sorting-container">
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">Сначала дешевые</option>
@@ -153,12 +155,12 @@
             </a>
             <p class="description-housing">Гостиница</p>
             <p class="price-housing">От 4000 ₽</p>
-            <a class="product-card-button button" href="#">подробнее</a>
-            <a class="product-card-button button" href="#">в избранное</a>
+            <a class="button button-detail" href="#">подробнее</a>
+            <a class="button button-like" href="#">в избранное</a>
             <p class="stars stars-four">
               <span class="visually-hidden">Рейтинг гостиницы - четыре звезды</span>
             </p>
-            <p class="product-card-button button" href="#">Рейтинг: 8,5</p>
+            <p class="button button-rating" href="#">Рейтинг: 8,5</p>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -167,12 +169,12 @@
             </a>
             <p class="description-housing">Гостиница</p>
             <p class="price-housing">От 5000 ₽</p>
-            <a class="product-card-button button" href="#">подробнее</a>
-            <a class="product-card-button button" href="#">в избранном</a>
+            <a class="button button-detail" href="#">подробнее</a>
+            <a class="button button-selected" href="#">в избранном</a>
             <p class="stars stars-four">
               <span class="visually-hidden">Рейтинг гостиницы - четыре звезды</span>
             </p>
-            <p class="product-card-button button" href="#">Рейтинг: 9,2</p>
+            <p class="button button-rating" href="#">Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -181,12 +183,12 @@
             </a>
             <p class="description-housing">Гостиница</p>
             <p class="price-housing">От 2500 ₽</p>
-            <a class="product-card-button button" href="#">подробнее</a>
-            <a class="product-card-button button" href="#">в избранное</a>
+            <a class="button button-detail" href="#">подробнее</a>
+            <a class="button button-like" href="#">в избранное</a>
             <p class="stars stars-three">
               <span class="visually-hidden">Рейтинг гостиницы - три звезды</span>
             </p>
-            <p class="product-card-button button" href="#">Рейтинг: 6,9</p>
+            <p class="button button-rating" href="#">Рейтинг: 6,9</p>
           </li>
           <li class="hotel-card">
             <a class="hotel-card-link" href="#">
@@ -195,12 +197,12 @@
             </a>
             <p class="description-housing">Гостиница</p>
             <p class="price-housing">От 1500 ₽</p>
-            <a class="product-card-button button" href="#">подробнее</a>
-            <a class="product-card-button button" href="#">в избранное</a>
+            <a class="button button-detail" href="#">подробнее</a>
+            <a class="button button-like" href="#">в избранное</a>
             <p class="stars stars-two">
               <span class="visually-hidden">Рейтинг гостиницы - две звезды</span>
             </p>
-            <p class="product-card-button button" href="#">Рейтинг: 5,0</p>
+            <p class="button button-rating" href="#">Рейтинг: 5,0</p>
           </li>
         </ul>
         <ul class="pagination">
@@ -228,17 +230,19 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="newsletter">
-        <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
-        <p class="page-footer-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <section class="newsletter-footer">
+        <h2 class="visually-hidden">Подпишитесь на рассылку</h2>
+        <p class="title-catalog">Подпишитесь на рассылку</p>
+        <p class="footer-catalog">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="newsletter-email">
-            <input type="text" name="E-mail" placeholder="Ваш e-mail" required>
-          </p>
-          <button class="button" type="submit">Подписаться</button>
+            <label class="footer-label" for="mail"></label>
+            <input class="footer-input" type="text" name="E-mail" placeholder="Ваш e-mail" required>
+          <button class="button button-mail" type="submit">Подписаться</button>
         </form>
       </section>
+      <div class="page-footer-social">
       <section class="footer-social">
+        <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="button" href="https://vk.com/htmlacademy">
@@ -258,10 +262,15 @@
         </ul>
       </section>
       <section class="footer-contacts">
+        <h2 class="visually-hidden">Контактный телефон</h2>
         <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </section>
-      <a class="htmlacademy-link" href="https://htmlacademy.ru/"></a>
+      <section class="footer-link">
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+      </section>
+      </div>
     </footer>
+  </div>
   </body>
 
 </html>
